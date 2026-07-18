@@ -16,4 +16,6 @@ jobs:
 
             - name: "print current date"
               run: date
-              
+
+            - name: "who is working on this laptop"
+              run: whoami              
