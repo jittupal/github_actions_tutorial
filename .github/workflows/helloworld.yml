@@ -1,9 +1,10 @@
 name: "Hello World Workflow"
 
 on: 
-    push: 
+    pus: 
         branches:
             - master
+            - test
 
             
 jobs:
@@ -15,4 +16,6 @@ jobs:
 
             - name: "print current date"
               run: date
-              
+
+            - name: "who is working on this laptop"
+              run: whoami              
