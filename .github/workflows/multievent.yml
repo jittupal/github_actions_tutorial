@@ -8,7 +8,8 @@ on:
 
             
 jobs:
-    hello_world:
+    on-push:
+        if: github.event_name == 'push'
         runs-on: ubuntu-latest
         steps:
             - name: "print hello world"
@@ -22,7 +23,8 @@ jobs:
 
 
               
-    checking_system:
+    on-pull:
+        if: github.event_name == 'pull'
         runs-on: ubuntu-latest
         steps:
             - name: "check available space"
