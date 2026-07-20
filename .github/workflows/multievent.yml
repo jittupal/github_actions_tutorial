@@ -26,9 +26,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: "check available space"
-              run: du -h
+              run: df -h
 
             - name: "check current running processess"
-              run: htop
+              run: ps aux
   
                        
