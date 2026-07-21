@@ -5,7 +5,7 @@ on:
         branches:
             - master
             - test
-            
+
     pull_request:
         branches:
             - master
@@ -39,6 +39,9 @@ jobs:
 
             - name: "check current running processess"
               run: ps aux
+
+            - name: "new pull request is asking"
+              run: echo "new pull request is done"
         
     on_workflow_dispatch:
         if: github.event_name == 'workflow_dispatch'
