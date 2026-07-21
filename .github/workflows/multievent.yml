@@ -25,7 +25,7 @@ jobs:
 
               
     on-pull:
-        if: github.event_name == 'pull'
+        if: github.event_name == 'pull_request'
         runs-on: ubuntu-latest
         steps:
             - name: "check available space"
