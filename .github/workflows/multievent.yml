@@ -5,6 +5,7 @@ on:
         branches:
             - master
             - test
+    workflow_dispatch:
 
             
 jobs:
@@ -32,5 +33,12 @@ jobs:
 
             - name: "check current running processess"
               run: ps aux
+        
+    on_workflow_dispatch:
+        if: github.event_name == 'workflow_dispatch'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "new job added"
+              run: pwd
   
                        
