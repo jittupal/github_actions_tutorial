@@ -5,6 +5,10 @@ on:
         branches:
             - master
             - test
+    pull_request:
+        branches:
+            - master
+            - test
     workflow_dispatch:
 
             
